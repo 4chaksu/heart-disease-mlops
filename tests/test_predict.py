@@ -2,7 +2,7 @@ import pandas as pd
 from unittest.mock import Mock, patch
 
 # Import after mocking if needed
-from src.predict import predict
+import src.predict as predict_module
 
 
 @patch("src.predict.handle_missing_values")
@@ -18,7 +18,7 @@ def test_predict(
     mock_features.side_effect = lambda x: x
     mock_encode.side_effect = lambda x, y: x
 
-    predict.feature_columns = [
+    predict_module.feature_columns = [
         "age",
         "trestbps",
         "chol",
@@ -26,12 +26,12 @@ def test_predict(
         "oldpeak"
     ]
 
-    predict.scaler = Mock()
-    predict.scaler.transform.side_effect = lambda x: x
+    predict_module.scaler = Mock()
+    predict_module.scaler.transform.side_effect = lambda x: x
 
-    predict.model = Mock()
-    predict.model.predict.return_value = [1]
-    predict.model.predict_proba.return_value = [
+    predict_module.model = Mock()
+    predict_module.model.predict.return_value = [1]
+    predict_module.model.predict_proba.return_value = [
         [0.2, 0.8]
     ]
 
@@ -43,7 +43,7 @@ def test_predict(
         "oldpeak": 1.0,
     }
 
-    result = predict.predict(data)
+    result = predict_module.predict(data)
 
     assert result["prediction"] == 1
     assert result["probability"] == 0.8
