@@ -3,6 +3,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RandomizedSearchCV
 
+
 def split_data(X, y):
 
     return train_test_split(
@@ -26,11 +27,11 @@ def train_logistic(X_train, y_train):
 def train_random_forest(X_train, y_train):
 
     param_dist = {
-        "n_estimators":[100,200,300,500],
-        "max_depth":[None,5,10,15,20],
-        "min_samples_split":[2,5,10],
-        "min_samples_leaf":[1,2,4],
-        "max_features":["sqrt","log2"]
+        "n_estimators": [100, 200, 300, 500],
+        "max_depth": [None, 5, 10, 15, 20],
+        "min_samples_split": [2, 5, 10],
+        "min_samples_leaf": [1, 2, 4],
+        "max_features": ["sqrt", "log2"]
     }
 
     rf = RandomForestClassifier(

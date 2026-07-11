@@ -20,14 +20,12 @@ from src.mlflow_tracking import log_experiment
 
 import joblib
 from pathlib import Path
-import joblib
+
 
 def main():
 
     print("Loading data...")
     X, y = load_data()
-
-
     print("Handling missing values...")
     X = handle_missing_values(X)
 
@@ -109,7 +107,7 @@ def main():
         recall=metrics["recall"],
         roc_auc=metrics["roc_auc"]
     )
-    
+
     # Learn values from training data
     imputer_values = {}
 
@@ -121,7 +119,6 @@ def main():
                 imputer_values[col] = X[col].median()
             else:
                 imputer_values[col] = X[col].mode().iloc[0]
-
 
     print("Saving model artifacts...")
 

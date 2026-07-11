@@ -1,4 +1,3 @@
-import pandas as pd
 from unittest.mock import Mock, patch
 
 # Import after mocking if needed
