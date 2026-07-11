@@ -1,7 +1,6 @@
 import pandas as pd
 from sklearn.preprocessing import StandardScaler
 
-import pandas as pd
 
 def handle_missing_values(X):
 

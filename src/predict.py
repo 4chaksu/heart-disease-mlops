@@ -60,7 +60,7 @@ def predict(data):
 
     # remove extra columns
     df = df[feature_columns]
-    
+
     # Use saved scaler
     df[numerical_features] = scaler.transform(
         df[numerical_features]
@@ -77,5 +77,4 @@ def predict(data):
         "probability": float(
             probability[0][prediction[0]]
         )
-    } 
-
+    }

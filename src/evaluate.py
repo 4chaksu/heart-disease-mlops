@@ -5,6 +5,7 @@ from sklearn.metrics import (
     roc_auc_score
 )
 
+
 def evaluate_model(model, X_test, y_test):
 
     y_pred = model.predict(X_test)

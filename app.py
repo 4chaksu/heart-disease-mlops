@@ -10,11 +10,13 @@ logging.basicConfig(
 
 app = FastAPI()
 
+
 @app.get("/")
 def home():
     return {
         "message": "Heart Disease Prediction API"
     }
+
 
 @app.post("/predict")
 def make_prediction(data: dict):
