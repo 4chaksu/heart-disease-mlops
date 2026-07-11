@@ -6,17 +6,17 @@ from unittest.mock import Mock, patch
 from src.train_pipeline import main
 
 
-@patch("train_pipeline.joblib.dump")
-@patch("train_pipeline.log_experiment")
-@patch("train_pipeline.evaluate_model")
-@patch("train_pipeline.train_random_forest")
-@patch("train_pipeline.scale_features")
-@patch("train_pipeline.split_data")
-@patch("train_pipeline.encode_features")
-@patch("train_pipeline.create_features")
-@patch("train_pipeline.handle_outliers")
-@patch("train_pipeline.handle_missing_values")
-@patch("train_pipeline.load_data")
+@patch("src.train_pipeline.joblib.dump")
+@patch("src.train_pipeline.log_experiment")
+@patch("src.train_pipeline.evaluate_model")
+@patch("src.train_pipeline.train_random_forest")
+@patch("src.train_pipeline.scale_features")
+@patch("src.train_pipeline.split_data")
+@patch("src.train_pipeline.encode_features")
+@patch("src.train_pipeline.create_features")
+@patch("src.train_pipeline.handle_outliers")
+@patch("src.train_pipeline.handle_missing_values")
+@patch("src.train_pipeline.load_data")
 def test_main_pipeline(
     mock_load_data,
     mock_missing,

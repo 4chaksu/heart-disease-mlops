@@ -57,7 +57,7 @@ def test_train_logistic():
     assert len(predictions) == len(y_train)
 
 
-@patch("train.RandomizedSearchCV")
+@patch("src.train.RandomizedSearchCV")
 def test_train_random_forest(
     mock_random_search
 ):

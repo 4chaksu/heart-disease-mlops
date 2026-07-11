@@ -3,10 +3,10 @@ from unittest.mock import Mock, patch
 from src.mlflow_tracking import log_experiment
 
 
-@patch("mlflow_tracking.mlflow.sklearn.log_model")
-@patch("mlflow_tracking.mlflow.log_metric")
-@patch("mlflow_tracking.mlflow.log_params")
-@patch("mlflow_tracking.mlflow.start_run")
+@patch("src.mlflow_tracking.mlflow.sklearn.log_model")
+@patch("src.mlflow_tracking.mlflow.log_metric")
+@patch("src.mlflow_tracking.mlflow.log_params")
+@patch("src.mlflow_tracking.mlflow.start_run")
 def test_log_experiment(
     mock_start_run,
     mock_log_params,

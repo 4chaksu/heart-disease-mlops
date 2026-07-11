@@ -5,7 +5,7 @@ from unittest.mock import Mock, patch
 from src.data_ingestion import load_data
 
 
-@patch("data_ingestion.fetch_ucirepo")
+@patch("src.data_ingestion.fetch_ucirepo")
 def test_load_data(mock_fetch):
 
     mock_dataset = Mock()

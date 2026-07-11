@@ -5,9 +5,9 @@ from unittest.mock import Mock, patch
 from src.predict import predict
 
 
-@patch("predict.handle_missing_values")
-@patch("predict.create_features")
-@patch("predict.encode_features")
+@patch("src.predict.handle_missing_values")
+@patch("src.predict.create_features")
+@patch("src.predict.encode_features")
 def test_predict(
     mock_encode,
     mock_features,
