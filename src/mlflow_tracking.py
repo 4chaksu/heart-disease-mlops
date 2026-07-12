@@ -1,3 +1,4 @@
+import os
 import mlflow
 import mlflow.sklearn
 
@@ -22,4 +23,8 @@ def log_experiment(
         mlflow.log_metric("recall", recall)
         mlflow.log_metric("roc_auc", roc_auc)
 
-        mlflow.sklearn.log_model(model, "model")
+        try:
+            if not os.getenv("GITHUB_ACTIONS"):
+                mlflow.sklearn.log_model(model, "model")
+        except Exception as e:
+            print(f"MLflow model logging skipped: {e}")
