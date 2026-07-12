@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 import logging
+from prometheus_fastapi_instrumentator import Instrumentator
 
 from src.predict import predict
 
@@ -9,6 +10,9 @@ logging.basicConfig(
 )
 
 app = FastAPI()
+
+# Prometheus Metrics
+Instrumentator().instrument(app).expose(app)
 
 
 @app.get("/")

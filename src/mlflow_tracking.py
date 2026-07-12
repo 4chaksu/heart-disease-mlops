@@ -1,6 +1,9 @@
 import mlflow
 import mlflow.sklearn
 
+mlflow.set_tracking_uri("sqlite:///mlflow.db")
+mlflow.set_experiment("Heart Disease Prediction")
+
 
 def log_experiment(
     model,

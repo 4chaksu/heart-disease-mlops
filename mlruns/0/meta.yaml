@@ -1,0 +1,9 @@
+artifact_location: file:///C:/Users/vinay/OneDrive/Desktop/MLops/assignment 1/heart-disease-mlops/mlruns/0
+creation_time: 1783839134574
+effective_trace_archival_retention: null
+experiment_id: '0'
+last_update_time: 1783839134574
+lifecycle_stage: active
+name: Default
+trace_location: null
+workspace: default

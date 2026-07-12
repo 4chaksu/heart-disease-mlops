@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/vinay/OneDrive/Desktop/MLops/assignment 1/heart-disease-mlops/mlruns/630643005226940054/37d71a96c0f64ac687ee03afae377894/artifacts
+end_time: 1783839444829
+entry_point_name: ''
+experiment_id: '630643005226940054'
+lifecycle_stage: active
+run_id: 37d71a96c0f64ac687ee03afae377894
+run_name: calm-pug-290
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783839399659
+status: 3
+tags: []
+user_id: vinay

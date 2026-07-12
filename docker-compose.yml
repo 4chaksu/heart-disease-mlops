@@ -1,8 +1,7 @@
-version: '3'
-
 services:
   api:
-    image: vinaybora/heart-api:latest
+    build: .
+    container_name: heart-api
     ports:
       - "8000:8000"
 
@@ -12,8 +11,12 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    depends_on:
+      - api
 
   grafana:
     image: grafana/grafana
     ports:
       - "3000:3000"
+    depends_on:
+      - prometheus

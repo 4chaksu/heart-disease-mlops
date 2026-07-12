@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/vinay/OneDrive/Desktop/MLops/assignment 1/heart-disease-mlops/mlruns/630643005226940054/models/m-b562f39369834d169bfd79c4f6e23c87/artifacts
+creation_timestamp: 1783839399977
+experiment_id: '630643005226940054'
+last_updated_timestamp: 1783839444769
+model_id: m-b562f39369834d169bfd79c4f6e23c87
+model_type: null
+name: model
+source_run_id: 37d71a96c0f64ac687ee03afae377894
+status: 2
+status_message: null

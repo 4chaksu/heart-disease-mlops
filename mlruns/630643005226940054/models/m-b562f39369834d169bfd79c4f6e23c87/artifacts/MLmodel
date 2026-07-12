@@ -1,0 +1,23 @@
+artifact_path: file:///C:/Users/vinay/OneDrive/Desktop/MLops/assignment 1/heart-disease-mlops/mlruns/630643005226940054/models/m-b562f39369834d169bfd79c4f6e23c87/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.skops
+    predict_fn: predict
+    python_version: 3.12.0
+  sklearn:
+    code: null
+    pickled_model: model.skops
+    serialization_format: skops
+    sklearn_version: 1.9.0
+    skops_trusted_types: null
+mlflow_version: 3.14.0
+model_id: m-b562f39369834d169bfd79c4f6e23c87
+model_size_bytes: 5823000
+model_uuid: m-b562f39369834d169bfd79c4f6e23c87
+prompts: null
+run_id: 37d71a96c0f64ac687ee03afae377894
+utc_time_created: '2026-07-12 06:56:40.158339'

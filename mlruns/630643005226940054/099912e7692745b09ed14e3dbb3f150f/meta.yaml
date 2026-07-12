@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/vinay/OneDrive/Desktop/MLops/assignment 1/heart-disease-mlops/mlruns/630643005226940054/099912e7692745b09ed14e3dbb3f150f/artifacts
+end_time: 1783839213688
+entry_point_name: ''
+experiment_id: '630643005226940054'
+lifecycle_stage: active
+run_id: 099912e7692745b09ed14e3dbb3f150f
+run_name: handsome-bat-974
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1783839172780
+status: 3
+tags: []
+user_id: vinay

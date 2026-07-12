@@ -11,3 +11,4 @@ pytest
 flake8
 ucimlrepo
 pathlib
+prometheus-fastapi-instrumentator
