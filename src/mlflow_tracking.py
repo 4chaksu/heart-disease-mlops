@@ -24,7 +24,6 @@ def log_experiment(
         mlflow.log_metric("roc_auc", roc_auc)
 
         try:
-            if not os.getenv("GITHUB_ACTIONS"):
-                mlflow.sklearn.log_model(model, "model")
+            mlflow.sklearn.log_model(model, "model")
         except Exception as e:
-            print(f"MLflow model logging skipped: {e}")
+            print(f"MLflow model logging failed: {e}")
